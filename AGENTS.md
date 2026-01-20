@@ -9,9 +9,25 @@ This repository contains Ralph for GitHub Copilot CLI - an autonomous AI agent l
 ├── ralph.sh          # Main loop script
 ├── prompt.md         # Instructions for each Copilot iteration
 ├── prd.json.example  # Example PRD format
+├── skills/           # Agent skills
+│   └── prd/          # PRD generator skill
+│       └── SKILL.md  # PRD generation instructions
 ├── README.md         # User documentation
 └── AGENTS.md         # This file
 ```
+
+## Skills
+
+### prd-generator (`skills/prd/SKILL.md`)
+
+Generates `prd.json` files for Ralph autonomous implementation.
+
+**Triggers:** "create a PRD", "generate a PRD", "plan a feature", "write user stories", "set up Ralph for [feature]"
+
+**Workflow:**
+1. Asks 3-5 clarifying questions with A/B/C/D options
+2. Generates structured prd.json with properly-sized user stories
+3. Each story includes specific, verifiable acceptance criteria
 
 ## Commands
 

@@ -95,6 +95,7 @@ Default is 10 iterations. Each iteration:
 | `prompt.md` | Instructions for each iteration |
 | `prd.json` | Your user stories (create from example) |
 | `progress.txt` | Learnings from previous iterations (auto-created) |
+| `skills/prd/SKILL.md` | PRD generator skill for creating prd.json |
 
 ## Critical Concepts
 
@@ -141,6 +142,22 @@ cat progress.txt
 # Check commits
 git log --oneline -10
 ```
+
+## Generating PRDs
+
+Use the PRD skill to generate `prd.json` files through a guided process:
+
+```bash
+# Ask Copilot to generate a PRD
+copilot "Generate a PRD for a user authentication system"
+```
+
+The skill will:
+1. Ask 3-5 clarifying questions with A/B/C/D options
+2. Generate a properly structured `prd.json`
+3. Create small, implementable user stories with verifiable acceptance criteria
+
+See `skills/prd/SKILL.md` for the full specification.
 
 ## Customizing
 
